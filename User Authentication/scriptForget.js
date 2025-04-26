@@ -1,19 +1,16 @@
 form = document.getElementById("form-1");
 
-// LOGIN PAGE
+// FORGET PASSWORD PAGE
 document
-  .getElementById("loginBtn")
+  .getElementById("forgetBtn")
   .addEventListener("click", function validateForm() {
     const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
 
     if (email == "") {
       alert("Email cannot be empty");
       return false;
-    } else if (password == "") {
-      alert("Password field missing");
-      return false;
     }
-    alert("Login Successful");
+    alert("Code sent to email");
+    form.action = "otp.html";
     form.submit();
   });
