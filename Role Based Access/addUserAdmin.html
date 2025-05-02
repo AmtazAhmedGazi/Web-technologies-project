@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User Create</title>
+    <title>User Admin</title>
   </head>
   <body>
-    <h1>User Page</h1>
+    <a href="javascript:history.back()" >Go Back</a>
+    <h1>User Admin</h1>
     <form id="form-1" method="post" enctype="">
       <table>
+    <tr>
+        <td>
+        <label for="email">Email</label>
+        </td>
+
+        <td>
+            <input type="email" id="email" name="email" />
+        </td>
+        <td title="hint: sample@example.com">&#9432</td>
+    </tr>
+
+    <tr>
+        <td>
+        <label for="username">Username</label>
+        </td>
+
+        <td>
+            <input type="username" id="username" name="username" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="password">Password</label>
+        </td>
+ 
+        <td>
+        <input type="password" id="password" name="password">
+        </td>
+    </tr>
+
+    <tr>
+          <td>
+            <label for="confirmPassword">Confirm Password</label>
+          </td>
+       
+          <td>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+            />
+          </td>
+        </tr>
         <tr>
           <td>
             <label for="name">Name</label>
@@ -79,17 +124,30 @@
         </tr>
 
         <tr>
+          <td>User Type</td>
+          <td>
+            <input type="radio" id="admin" name="userType" value="admin" />
+            <label for="male">Admin</label>
+            <input type="radio" id="editor" name="userType" value="editor" />
+            <label for="female">Editor</label>
+            <input type="radio" id="user" name="userType" value="user" />
+            <label for="other">User</label>
+          </td>
+  
+        </tr>
+
+        <tr>
           <td>
             <input
               type="button"
               id="submitBtn"
               name="submitBtn"
-              value="Update Profile"
+              value="Add User"
             />
           </td>
         </tr>
       </table>
     </form>
-    <script src="JS/scriptUserCreate.js"></script>
+    <script src="scriptaddUser.js"></script>
   </body>
 </html>

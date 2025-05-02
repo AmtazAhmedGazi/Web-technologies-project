@@ -42,14 +42,6 @@ else {
    echo "Invalid URL";
  }
 
-// if($_SERVER["REQUEST_METHOD"] == "POST"){
-//     $email = test_input($_POST["email"]);
-//     $username = test_input($_POST["username"]);
-//     $password = test_input($_POST["password"]);
-//     $confirmPassword = test_input($_POST["confirmPassword"]);
-// }
-
-
 ?>
 
 

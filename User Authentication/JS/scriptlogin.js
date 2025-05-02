@@ -10,7 +10,26 @@ document
     if (email == "") {
       alert("Email cannot be empty");
       return false;
-    } else if (password == "") {
+    }
+
+    if (!email.includes("@")) {
+      alert("Please enter a valid email");
+      return false;
+    }
+
+    const atSymbolIndex = email.indexOf("@");
+    const dotSymbolIndex = email.indexOf(".", atSymbolIndex);
+
+    if (
+      atSymbolIndex === -1 ||
+      dotSymbolIndex === -1 ||
+      dotSymbolIndex < atSymbolIndex
+    ) {
+      alert("Please enter a valid email address ");
+      return false;
+    }
+
+    if (password == "") {
       alert("Password field missing");
       return false;
     }
