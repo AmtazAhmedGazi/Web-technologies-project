@@ -10,11 +10,18 @@ document
     let hasLowercase = false;
     let hasNumber = false;
 
+    if (password == "") {
+      alert("Password field is empty");
+      return false;
+    }
+
     if (confirmPassword == "") {
       alert("Confirm Password field cannot be empty");
       return false;
-    } else if (password == "") {
-      alert("Password field missing");
+    }
+
+    if (password.length <= 8 || confirmPassword.length <= 8) {
+      alert("Password length must be more than 8 characters");
       return false;
     }
 
@@ -32,13 +39,8 @@ document
       return false;
     }
 
-    if (confirmPassword != password) {
+    if (confirmPassword !== password) {
       alert("Password Doesn't match");
-      return false;
-    }
-
-    if (password.lenght <= 8) {
-      alert("You can not save this Password ");
       return false;
     }
 

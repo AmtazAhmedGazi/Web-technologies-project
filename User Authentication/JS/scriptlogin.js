@@ -34,5 +34,7 @@ document
       return false;
     }
     alert("Login Successful");
+    form.action = "../Activity%20Feed/homepage.html";
     form.submit();
   });
+s;

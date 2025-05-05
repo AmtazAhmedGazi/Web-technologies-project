@@ -6,11 +6,16 @@ document
   .addEventListener("click", function validateForm() {
     const otp = document.getElementById("otp").value;
 
-    if (otp == "") {
+    if (otp === "") {
       alert("OTP cannot be empty");
       return false;
     }
-    alert("Code Correct");
+
+    if (otp.length !== 6) {
+      alert("OTP must be 6 digits");
+      return false;
+    }
+    alert("OTP is Correct");
     form.action = "confirmPassword.html";
     form.submit();
   });

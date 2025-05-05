@@ -42,6 +42,14 @@ document
       alert("Username must not start with _");
       return false;
     }
+    if (password == "") {
+      alert("Password field missing");
+      return false;
+    }
+    if (confirmPassword == "") {
+      alert("Confirm Password field cannot be empty");
+      return false;
+    }
 
     for (let i = 0; i < username.length; i++) {
       const char = username[i];
@@ -75,14 +83,6 @@ document
       alert(
         "Password must contain at least one uppercase letter, one lowercase letter, and one number."
       );
-      return false;
-    }
-
-    if (confirmPassword == "") {
-      alert("Confirm Password field cannot be empty");
-      return false;
-    } else if (password == "") {
-      alert("Password field missing");
       return false;
     }
 

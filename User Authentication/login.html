@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Login</title>
+    <link rel="stylesheet" href="CSS/styleLogin.css" />
   </head>
   <body>
     <nav>
       <a href="index.html">Homepage</a>
-      <a href=""></a>
     </nav>
+    <section class="login-container">
+    <h1>Login</h1>
 
-    <h1>Login Page</h1>
-    <form id="form-1" method="post" enctype="">
+    <form id="form-1" method="post" action="#">  
       <table>
         <tr>
           <td>
@@ -20,9 +21,10 @@
 
         <tr>
           <td>
-            <input type="email" id="email" name="email" />
+            <input type="email" id="email" name="email" />  
+            <label title="hint: sample@example.com">&#9432</label>          
           </td>
-          <td title="hint: sample@example.com">&#9432</td>
+          
         </tr>
         <tr>
           <td>
@@ -31,9 +33,7 @@
         </tr>
         <tr>
           <td>
-            <input type="password" id="password" name="password" />
-          </td>
-           <td>
+            <input type="password" id="password" name="password" />  
             <label for="rememberMe">
               <input type="checkbox" id="rememberMe" name="rememberMe" /> Remember Me
             </label>
@@ -42,22 +42,21 @@
 
         <tr>
           <td>
-            <input type="button" id="loginBtn" name="loginBtn" value="Login" />
-            <a href="forgetPassword.html">Forget Password</a>
+            <input type="submit" id="loginBtn" name="loginBtn" value="Login" /> 
+            <a href="forgetPassword.html">Forgot Password?</a>
           </td>
         </tr>
 
         <tr>
           <td>
-            <p>Don't have any Id ? <a href="signUp.html">Sign Up</a></p>
+            <p>Don't have an account? <a href="signUp.html">Sign Up</a></p>
           </td>
         </tr>
       </table>
     </form>
+  </section>
     <footer>
-      <a href="contactUs.html">Contact Us</a>
-
-      <a href=""></a>
+      <a href="#">Contact Us</a>
     </footer>
 
     <script src="JS/scriptlogin.js"></script>

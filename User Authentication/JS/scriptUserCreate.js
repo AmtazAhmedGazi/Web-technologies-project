@@ -1,14 +1,45 @@
 form = document.getElementById("form-1");
+function previewImage(event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
 
+  reader.onload = function () {
+    const imagePreview = document.getElementById("imagePreview");
+    const imagePreviewText = document.getElementById("imagePreviewText");
+
+    imagePreview.src = reader.result;
+    imagePreview.style.display = "block";
+    imagePreviewText.style.display = "none";
+  };
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
 document
   .getElementById("submitBtn")
   .addEventListener("click", function validateForm() {
     const name = document.getElementById("name").value;
     const date = document.getElementById("date").value;
     const contactNumber = document.getElementById("contacNumber").value;
-    const fileInput = document.getElementById("profilPic");
     const gender =
       document.querySelector('input[name="gender"]:checked')?.value || "";
+    const fileInput = document.getElementById("profilPic");
+
+    if (!fileInput.files.length) {
+      alert("Please upload a profile picture.");
+      return false;
+    }
+    const file = fileInput.files[0];
+    const fileName = file.name.toLowerCase();
+    if (
+      !fileName.endsWith(".jpg") &&
+      !fileName.endsWith(".jpeg") &&
+      !fileName.endsWith(".png")
+    ) {
+      alert("Profile picture must be a JPG or PNG file.");
+      return false;
+    }
 
     if (name === "") {
       alert("Name cannot be empty");
@@ -29,9 +60,8 @@ document
       alert("Date cannot be empty");
       return false;
     }
-
-    if (!fileInput.files.length) {
-      alert("Please upload a profile picture.");
+    if (contactNumber === "") {
+      alert("Contact Number is missing");
       return false;
     }
 
