@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User Admin</title>
+    <title>User Create</title>
   </head>
   <body>
+   <div class="container">
     <a href="javascript:history.back()" >Go Back</a>
-    <h1>User Admin</h1>
+    <h1>User Add</h1>
     <form id="form-1" method="post" enctype="">
       <table>
-    <tr>
+      <tr>
         <td>
         <label for="email">Email</label>
         </td>
@@ -17,9 +18,9 @@
             <input type="email" id="email" name="email" />
         </td>
         <td title="hint: sample@example.com">&#9432</td>
-    </tr>
+      </tr>
 
-    <tr>
+      <tr>
         <td>
         <label for="username">Username</label>
         </td>
@@ -27,19 +28,20 @@
         <td>
             <input type="username" id="username" name="username" />
         </td>
-    </tr>
+        <!-- <td title="hint: sample@example.com">&#9432</td> -->
+     </tr>
 
-    <tr>
-        <td>
+     <tr>
+         <td>
             <label for="password">Password</label>
-        </td>
+         </td>
  
-        <td>
-        <input type="password" id="password" name="password">
-        </td>
-    </tr>
+         <td>
+          <input type="password" id="password" name="password">
+         </td>
+      </tr>
 
-    <tr>
+     <tr>
           <td>
             <label for="confirmPassword">Confirm Password</label>
           </td>
@@ -52,6 +54,7 @@
             />
           </td>
         </tr>
+
         <tr>
           <td>
             <label for="name">Name</label>
@@ -76,9 +79,7 @@
             <input type="radio" id="other" name="gender" value="Other" />
             <label for="other">Other</label>
           </td>
-          <td rowspan="6">
-            <!-- <img src="my.jpg" /> -->
-          </td>
+ 
         </tr>
 
         <tr>
@@ -126,14 +127,14 @@
         <tr>
           <td>User Type</td>
           <td>
-            <input type="radio" id="admin" name="userType" value="admin" />
-            <label for="male">Admin</label>
             <input type="radio" id="editor" name="userType" value="editor" />
             <label for="female">Editor</label>
             <input type="radio" id="user" name="userType" value="user" />
             <label for="other">User</label>
           </td>
-  
+          <td rowspan="6">
+            <!-- <img src="my.jpg" /> -->
+          </td>
         </tr>
 
         <tr>
@@ -149,5 +150,6 @@
       </table>
     </form>
     <script src="scriptaddUser.js"></script>
+  </div>
   </body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Social Media Home</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../../Assets/Activity%20Feed/styleHomepage.css"
+    />
+  </head>
+  <body>
+    <header>
+      <table class="header-table">
+        <tr>
+          <td class="logo">
+            <label for="logo">S</label>
+          </td>
+          <td class="searchbar">
+            <input type="text" placeholder="Search..." class="search-box" />
+          </td>
+          <td class="nav-links">
+            <table class="menu-table">
+              <tr>
+                <td>
+                  <a href="homepage.html"><i class="material-icons">home</i></a>
+                  <a href="../Direct%20Messaging/message.html"
+                    ><i class="material-icons">sms</i></a
+                  >
+                  <a href="notifications.html"
+                    ><i class="material-icons">notifications</i></a
+                  >
+                  <span class="menu-btn" onclick="toggleDropdown()">
+                    <i class="material-icons">menu</i>
+                  </span>
+                </td>
+              </tr>
+              <tr id="dropdownRow" style="display: none">
+                <td class="dropdown-menu-cell">
+                  <table class="dropdown-menu">
+                    <tr>
+                      <td><a href="#">View Profile</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">Settings</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../User%20Authentication/login.html">Logout</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <table class="layout-table" cellspacing="20">
+      <tr>
+        <td class="sidebar">
+          <h2>Your Menu</h2>
+          <ul>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Photos</a></li>
+          </ul>
+        </td>
+
+        <td class="main-content">
+          <section class="stories">
+            <table class="stories-table">
+              <tr>
+                <td class="story">Your Story</td>
+                <td class="story">Friend 1</td>
+                <td class="story">Friend 2</td>
+                <td class="story">Friend 3</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="posts">
+            <div class="post-toggle">
+              <button id="topBtn" class="active" onclick="togglePosts('top')">
+                Top Posts
+              </button>
+              <button id="recentBtn" onclick="togglePosts('recent')">
+                Most Recent
+              </button>
+            </div>
+
+            <div id="topPosts" style="display: block">
+              <table class="posts-table" cellspacing="15">
+                <tr>
+                  <td class="post">
+                    <h3>Kabir Rahman</h3>
+                    <p class="timestamp">5 hours ago</p>
+                    <p>Just enjoying a great day!</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div id="recentPosts" style="display: none">
+              <table class="posts-table" cellspacing="15">
+                <tr>
+                  <td class="post">
+                    <h3>Moinul Hasan</h3>
+                    <p class="timestamp">2 hours ago</p>
+                    <p>Loving this new app!</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </section>
+        </td>
+      </tr>
+    </table>
+    <script src="../../Controller/Activity%20Feed/JS/homepage.js"></script>
+  </body>
+</html>

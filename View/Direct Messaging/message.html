@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="../../Assets/Direct%20Messaging/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <table class="chat-layout">
+        <tr valign="top">
+          <td class="chat-list">
+            <h3>Chats</h3>
+            <ul>
+              <li onclick="switchChat('chat1')">Group Chat 1</li>
+              <li onclick="switchChat('chat2')">Group Chat 2</li>
+              <li onclick="switchChat('kabir')">Kabir Hasan</li>
+              <li onclick="switchChat('moinul')">Moinul Hasan</li>
+            </ul>
+          </td>
+
+          <td class="chat-thread">
+            <table class="chat-thread-layout">
+              <tr>
+                <td class="messages" id="chat1">
+                  <h4>Group Chat 1</h4>
+                  <p><strong>Alif:</strong> Hey everyone!</p>
+                  <p align="right">
+                    <strong>You:</strong> Hi! What are you doing?
+                  </p>
+                  <p><strong>Robi:</strong> doing nothing.</p>
+                </td>
+                <td class="messages" id="chat2">
+                  <h4>Group Chat 2</h4>
+                  <p><strong>Rafi:</strong> How's are you guys?</p>
+                  <p align="right"><strong>You:</strong> I am fine and you ?</p>
+                  <p><strong>Ramim:</strong> Sounds good.</p>
+                </td>
+                <td class="messages" id="kabir">
+                  <h4>Kabir Hasan</h4>
+                  <p>
+                    <strong>Kabir:</strong> Hey! Are you free to meet this
+                    weekend?
+                  </p>
+                  <p align="right">
+                    <strong>You:</strong> Yes, I am! When do you want to meet?
+                  </p>
+                </td>
+                <td class="messages" id="moinul">
+                  <h4>Moinul Hasan</h4>
+                  <p><strong>Moinul:</strong> Can you send me those photos?</p>
+                  <p align="right"><strong>You:</strong> Sure.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="input-area" colspan="4">
+                  <input
+                    type="text"
+                    name="message"
+                    id="messageInput"
+                    placeholder="Type your message..."
+                  />
+                  <input type="submit" value="Send" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="../../Controller/Direct%20Messaging/JS/scriptMessage.js"></script>
+  </body>
+</html>
