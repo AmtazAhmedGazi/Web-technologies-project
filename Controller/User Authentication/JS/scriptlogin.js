@@ -1,40 +1,10 @@
-form = document.getElementById("form-1");
+function validateLogin() {
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
 
-// LOGIN PAGE
-document
-  .getElementById("loginBtn")
-  .addEventListener("click", function validateForm() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    if (email == "") {
-      alert("Email cannot be empty");
-      return false;
-    }
-
-    if (!email.includes("@")) {
-      alert("Please enter a valid email");
-      return false;
-    }
-
-    const atSymbolIndex = email.indexOf("@");
-    const dotSymbolIndex = email.indexOf(".", atSymbolIndex);
-
-    if (
-      atSymbolIndex === -1 ||
-      dotSymbolIndex === -1 ||
-      dotSymbolIndex < atSymbolIndex
-    ) {
-      alert("Please enter a valid email address ");
-      return false;
-    }
-
-    if (password == "") {
-      alert("Password field missing");
-      return false;
-    }
-    alert("Login Successful");
-    form.action = "../Activity%20Feed/homepage.html";
-    form.submit();
-  });
-s;
+  if (username === "" || password === "") {
+    alert("Username or Password field cannot be empty");
+    return false;
+  }
+  return true;
+}

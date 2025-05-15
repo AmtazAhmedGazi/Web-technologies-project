@@ -2,59 +2,65 @@
 <html lang="en">
   <head>
     <title>Login</title>
-    <link rel="stylesheet" href="../../Assets/User%20Authentication/styleLogin.css" />
+    <link
+      rel="stylesheet"
+      href="../../Assets/User%20Authentication/styleLogin.css"
+    />
   </head>
   <body>
     <nav>
       <a href="index.html">Homepage</a>
     </nav>
     <section class="login-container">
-    <h1>Login</h1>
+      <h1>Login</h1>
 
-    <form id="form-1" method="post" action="#">  
-      <table>
-        <tr>
-          <td>
-            <label for="email">Email</label>
-          </td>
-        </tr>
+      <form
+        method="post"
+        action="../../Controller/User Authentication/PHP/loginCheck.php"
+        onsubmit="return validateLogin();"
+      >
+        <table>
+          <tr>
+            <td>
+              <label for="username">Username</label>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <input type="email" id="email" name="email" />  
-            <label title="hint: sample@example.com">&#9432</label>          
-          </td>
-          
-        </tr>
-        <tr>
-          <td>
-            <label for="password">Password</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="password" id="password" name="password" />  
-            <label for="rememberMe">
-              <input type="checkbox" id="rememberMe" name="rememberMe" /> Remember Me
-            </label>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <input type="text" id="username" name="username" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Password</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="password" id="password" name="password" />
+              <label for="rememberMe">
+                <input type="checkbox" id="rememberMe" name="rememberMe" />
+                Remember Me
+              </label>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <input type="submit" id="loginBtn" name="loginBtn" value="Login" /> 
-            <a href="forgetPassword.html">Forgot Password?</a>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <input type="submit" id="submit" name="submit" value="Login" />
+              <a href="forgetPassword.html">Forgot Password?</a>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <p>Don't have an account? <a href="signUp.html">Sign Up</a></p>
-          </td>
-        </tr>
-      </table>
-    </form>
-  </section>
+          <tr>
+            <td>
+              <p>Don't have an account? <a href="signUp.html">Sign Up</a></p>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </section>
     <footer>
       <a href="#">Contact Us</a>
     </footer>
