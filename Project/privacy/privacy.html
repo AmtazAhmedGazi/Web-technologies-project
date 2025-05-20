@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Settings</title>
+  <link rel="stylesheet" href="privacy.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Privacy Settings</h2>
+    <form id="privacyForm" onsubmit="return validatePrivacyForm()">
+      
+      <label for="postVisibility">Post Visibility:</label>
+      <select id="postVisibility" name="postVisibility">
+        <option value="">-- Select --</option>
+        <option value="public">Public</option>
+        <option value="friends">Friends</option>
+        <option value="custom">Custom</option>
+      </select>
+
+      <label for="blockUser">Block User (username/email):</label>
+      <input type="text" id="blockUser" name="blockUser" placeholder="Enter username or email">
+
+      <label for="activityAction">Activity Log:</label>
+      <select id="activityAction" name="activityAction">
+        <option value="">-- Select Action --</option>
+        <option value="view">View Log</option>
+        <option value="delete">Delete Selected Activities</option>
+      </select>
+
+      <button type="submit">Save Settings</button>
+    </form>
+    <p id="privacyMessage"></p>
+  </div>
+
+  <script src="privacy.js"></script>
+</body>
+</html>
