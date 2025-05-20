@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hashtag Search</title>
+  <link rel="stylesheet" href="hashtag.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Hashtag Search</h2>
+    <form id="hashtagForm" onsubmit="return validateHashtagForm()">
+      
+      <label for="hashtag">Enter Hashtag:</label>
+      <input type="text" id="hashtag" name="hashtag" placeholder="#example">
+
+      <label>
+        <input type="checkbox" id="follow" name="follow">
+        Follow this hashtag
+      </label>
+
+      <label>
+        <input type="checkbox" id="trending" name="trending">
+        Show trending volume graph
+      </label>
+
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="hashtag.js"></script>
+</body>
+</html>

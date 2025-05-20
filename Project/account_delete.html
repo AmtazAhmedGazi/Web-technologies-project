@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Deletion</title>
+  <link rel="stylesheet" href="account_delete.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Account Deletion Request</h2>
+    <form id="deletionForm" onsubmit="return validateDeletionForm()">
+      
+      <label for="username">Username or Email:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username or email">
+
+      <label for="deletionType">Choose Action:</label>
+      <select id="deletionType" name="deletionType">
+        <option value="">-- Select --</option>
+        <option value="deactivate">Deactivate (14-day reversible)</option>
+        <option value="delete">Delete Permanently</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="downloadData" name="downloadData">
+        I want to download all my account data
+      </label>
+
+      <label for="twofa">Enter 2FA Code:</label>
+      <input type="text" id="twofa" name="twofa" placeholder="6-digit code">
+
+      <button type="submit">Submit Request</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script src="account_delete.js"></script>
+</body>
+</html>

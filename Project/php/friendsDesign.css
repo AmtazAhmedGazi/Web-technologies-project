@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  }
+  
+  .friend-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ccc;
+    width: 400px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    background: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #005bb5;
+  }
+  
+  .requests ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .requests li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .action-buttons button {
+    margin-left: 5px;
+  }
+  
