@@ -1,13 +1,15 @@
 <?php 
-session_start();
+    error_reporting(E_ALL);
+
 require_once('../../Controller/User Authentication/PHP/otpEmail.php');
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    $otp = otp();
+    $email = $_SESSION['email'] ;
+    $otp = otp($email);
     $_SESSION['otp'] = $otp;
 }
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   <body>
     <section>
       <h1>OTP</h1>
-      <form id="form-1" method="post" onsubmit="return validateOtp();">
+      <form id="form-1" method="post" >
         <table>
           <tr>
             <td><label for="otp">Enter OTP:</label></td>
@@ -39,9 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             <td>
               <input
                 type="submit"
-                id="otpBtn"
-                name="otpBtn"
+                id="submit"
+                name="submit"
                 value="Confirm OTP"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                id="resend"
+                name="resend"
+                value="resend OTP"
+                onclick =""
               />
             </td>
           </tr>
@@ -52,7 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     <script src="../../Controller/User%20Authentication/JS/scriptOtpEmail.js"></script>
   </body>
 </html>
-
 <?php 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userOtp = trim($_POST['otp'] ?? '');
@@ -63,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         echo "<p>Invalid OTP. Please try again.</p>";
+        header('Location: otpEmail.php');
     }
 }
 ?>

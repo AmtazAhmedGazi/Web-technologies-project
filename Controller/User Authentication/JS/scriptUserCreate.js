@@ -1,4 +1,3 @@
-form = document.getElementById("form-1");
 function previewImage(event) {
   const file = event.target.files[0];
   const reader = new FileReader();
@@ -16,32 +15,35 @@ function previewImage(event) {
     reader.readAsDataURL(file);
   }
 }
+form = document.getElementById("form-1");
+
 document
-  .getElementById("submitBtn")
+  .getElementById("submit")
   .addEventListener("click", function validateForm() {
     const name = document.getElementById("name").value;
     const date = document.getElementById("date").value;
     const contactNumber = document.getElementById("contacNumber").value;
     const gender =
       document.querySelector('input[name="gender"]:checked')?.value || "";
+    const address = document.getElementById("address").value;
     const fileInput = document.getElementById("profilPic");
 
-    if (!fileInput.files.length) {
-      alert("Please upload a profile picture.");
-      return false;
-    }
-    const file = fileInput.files[0];
-    const fileName = file.name.toLowerCase();
-    if (
-      !fileName.endsWith(".jpg") &&
-      !fileName.endsWith(".jpeg") &&
-      !fileName.endsWith(".png")
-    ) {
-      alert("Profile picture must be a JPG or PNG file.");
-      return false;
-    }
+    // if (!fileInput.files.length) {
+    //   alert("Please upload a profile picture.");
+    //   return false;
+    // }
+    // const file = fileInput.files[0];
+    // const fileName = file.name.toLowerCase();
+    // if (
+    //   !fileName.endsWith(".jpg") &&
+    //   !fileName.endsWith(".jpeg") &&
+    //   !fileName.endsWith(".png")
+    // ) {
+    //   alert("Profile picture must be a JPG or PNG file.");
+    //   return false;
+    // }
 
-    if (name === "") {
+    if (name == "") {
       alert("Name cannot be empty");
       return false;
     }
@@ -51,16 +53,16 @@ document
       return false;
     }
 
-    if (gender === "") {
+    if (gender == "") {
       alert("Gender cannot be empty");
       return false;
     }
 
-    if (date === "") {
+    if (date == "") {
       alert("Date cannot be empty");
       return false;
     }
-    if (contactNumber === "") {
+    if (contactNumber == "") {
       alert("Contact Number is missing");
       return false;
     }
@@ -80,6 +82,5 @@ document
     }
 
     alert("Profile Updated Successful");
-    form.action = "login.html";
-    form.submit();
+    return true;
   });

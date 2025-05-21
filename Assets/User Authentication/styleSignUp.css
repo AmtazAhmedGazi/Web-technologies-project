@@ -4,8 +4,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 .signup-section {
@@ -40,7 +42,7 @@ label {
 input[type="email"],
 input[type="text"],
 input[type="password"] {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -56,16 +58,8 @@ input[type="submit"] {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
   background-color: #0056b3;
-}
-
-td[title] {
-  cursor: help;
-  font-size: 18px;
-  color: #666;
-  padding-left: 5px;
 }

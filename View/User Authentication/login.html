@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
     <link
       rel="stylesheet"
       href="../../Assets/User%20Authentication/styleLogin.css"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <nav>
@@ -15,9 +19,9 @@
       <h1>Login</h1>
 
       <form
+        id="form-1"
         method="post"
         action="../../Controller/User Authentication/PHP/loginCheck.php"
-        onsubmit="return validateLogin();"
       >
         <table>
           <tr>
@@ -28,7 +32,7 @@
 
           <tr>
             <td>
-              <input type="text" id="username" name="username" />
+              <input type="text" id="username" name="username" placeholder="Enter username......" />
             </td>
           </tr>
           <tr>
@@ -38,17 +42,28 @@
           </tr>
           <tr>
             <td>
-              <input type="password" id="password" name="password" />
-              <label for="rememberMe">
+              <input type="password" id="password" name="password"
+              placeholder="Enter password......" />
+              <!-- <input type="checkbox" onclick="myFunction()" />Show Password -->
+
+              <!-- <label for="rememberMe">
                 <input type="checkbox" id="rememberMe" name="rememberMe" />
-                Remember Me
+                Remember Me -->
               </label>
+            </td>
+            <td>
+              <i class="fa fa-eye" onclick="myFunction()" > </i>
             </td>
           </tr>
 
           <tr>
-            <td>
+            <td >
               <input type="submit" id="submit" name="submit" value="Login" />
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
               <a href="forgetPassword.html">Forgot Password?</a>
             </td>
           </tr>

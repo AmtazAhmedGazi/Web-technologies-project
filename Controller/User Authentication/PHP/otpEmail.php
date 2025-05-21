@@ -7,7 +7,7 @@ require '../../Controller/PHP Mailer/Exception.php';
 require '../../Controller/PHP Mailer/PHPMailer.php';
 require '../../Controller/PHP Mailer/SMTP.php';
 
-function otp() {
+function otp($email) {
     $randomSecureNumber = random_int(100000, 999999);
     $num = $randomSecureNumber;  // Generate OTP inside function
 
@@ -26,7 +26,7 @@ function otp() {
 
         // Recipients
         $mail->setFrom('amtazahmed@gmail.com', 'OTP');
-        $mail->addAddress('amtazahmedgazi@gmail.com', 'Social Media App');
+        $mail->addAddress($email, 'Social Media App');
 
         // Content
         $mail->isHTML(true);

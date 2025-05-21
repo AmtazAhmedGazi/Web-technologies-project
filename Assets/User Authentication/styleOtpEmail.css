@@ -47,6 +47,15 @@ input[type="submit"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+input[type="button"] {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: small;
+}
 
 input[type="submit"]:hover {
   background-color: #0056b3;

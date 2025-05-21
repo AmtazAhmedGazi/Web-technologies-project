@@ -6,10 +6,11 @@ document
   .addEventListener("click", function validateForm() {
     const email = document.getElementById("email").value;
 
-    if (email === "") {
+    if (email == "") {
       alert("Email cannot be empty");
       return false;
     }
+
     if (!email.includes("@")) {
       alert("Please enter a valid email");
       return false;
@@ -27,6 +28,5 @@ document
       return false;
     }
     alert("Code sent to email");
-    form.action = "otp.html";
-    form.submit();
+    return true;
   });

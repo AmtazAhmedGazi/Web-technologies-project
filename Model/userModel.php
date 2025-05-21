@@ -38,28 +38,38 @@
       }
       }
 
-    //   function userCreate($user){
-    //     $con = getConnection();
+      function userCreate($user){
+        $con = getConnection();
   
-    //     $sql = "SELECT * FROM users WHERE username = '{$user['username']}'";
-    //     $result = mysqli_query($con, $sql);
-    //     if (mysqli_num_rows($result) > 0) {
-    //         echo "Username already exists";
-    //         return false;
-    //     }
-    //     $sql = "SELECT * FROM users WHERE email = '{$user['email']}'";
-    //     $result = mysqli_query($con, $sql);
-    //     if (mysqli_num_rows($result) > 0) {
-    //         echo "Email already exists";
-    //         return false;
-    //     }
-    //     $sql = "insert into users values(null, '{$user['username']}', '{$user['password']}', '{$user['email']}')";
-    //     if($result2 = mysqli_query($con, $sql)){
-    //         return true;
-    //     }else{
-    //         return false;
-    //     }
-    //     }
+        $sql = "SELECT * from users where username= '{$user['username']}' AND email='{$user['email']}' AND password='{$user['password']}'";
+        $result = mysqli_query($con, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            echo "Invalid";
+            return false;
+        }
+        $sql = "insert into users values(null, '{$user['username']}', '{$user['password']}', '{$user['email']}')";
+        if($result2 = mysqli_query($con, $sql)){
+            return true;
+        }else{
+            return false;
+        }
+        }
+
+    function forgetPassword($user){
+            $con = getConnection();
+      
+            $sql = "SELECT * FROM users WHERE email = '{$user['email']}'";
+            $result = mysqli_query($con, $sql);
+            if (mysqli_num_rows($result) == 1) {
+                echo "Email already exists";
+                return true;
+            }else{
+                return true;
+            }
+            }
+
+
+
 
 
 

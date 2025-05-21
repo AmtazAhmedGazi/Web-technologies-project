@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Post Composer with Media Upload & Preview</title>
+    <link rel="stylesheet" href="../../Assets/Post Creation/stylePost.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create a Post</h1>
+
+      <form
+        id="postForm"
+        method="post"
+        enctype="multipart/form-data"
+        action="../../Controller/Post Creation/PHP/post.php"
+      >
+        <label for="postText">What's on your mind?</label>
+        <textarea
+          id="postText"
+          name="postText"
+          placeholder="Write something..."
+        ></textarea>
+
+        <label for="mediaUpload">Upload Image/Video</label>
+        <input type="file" name="mediaUpload" id="mediaUpload" />
+
+        <div class="preview" id="preview">
+          <em>Post preview will appear here...</em>
+        </div>
+
+        <button type="submit" id="submit" name="submit">Post</button>
+      </form>
+    </div>
+
+    <script src="../../Controller/Post Creation/JS/scriptPost.js"></script>
+  </body>
+</html>

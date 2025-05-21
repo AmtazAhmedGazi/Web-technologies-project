@@ -46,7 +46,7 @@ h1 {
 table {
   width: 100%;
   border-spacing: 10px;
-  border-collapse: collapse;
+  border: collapse;
 }
 
 input[type="text"],
@@ -59,9 +59,9 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  width: 85%;
+  width: 50%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 50px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }

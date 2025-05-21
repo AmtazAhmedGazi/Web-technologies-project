@@ -1,14 +1,19 @@
-function validateOtp() {
-  const otp = document.getElementById("otp").value;
+form = document.getElementById("form-1");
 
-  if (otp === "") {
-    alert("OTP cannot be empty");
-    return false;
-  }
+// FORGET PASSWORD PAGE
+document
+  .getElementById("submit")
+  .addEventListener("click", function validateForm() {
+    const otp = document.getElementById("otp").value;
 
-  if (otp.length !== 6) {
-    alert("OTP must be 6 digits");
-    return false;
-  }
-  return true;
-}
+    if (otp === "") {
+      alert("OTP cannot be empty");
+      return false;
+    }
+
+    if (otp.length !== 6) {
+      alert("OTP must be 6 digits");
+      return false;
+    }
+    return true;
+  });

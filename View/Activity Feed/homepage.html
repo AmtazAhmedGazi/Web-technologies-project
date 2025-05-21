@@ -11,6 +11,10 @@
       rel="stylesheet"
       href="../../Assets/Activity%20Feed/styleHomepage.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header>
@@ -30,9 +34,7 @@
                   <a href="../Direct%20Messaging/message.html"
                     ><i class="material-icons">sms</i></a
                   >
-                  <a href="notifications.html"
-                    ><i class="material-icons">notifications</i></a
-                  >
+                  <a href="#"><i class="material-icons">notifications</i></a>
                   <span class="menu-btn" onclick="toggleDropdown()">
                     <i class="material-icons">menu</i>
                   </span>
@@ -42,11 +44,53 @@
                 <td class="dropdown-menu-cell">
                   <table class="dropdown-menu">
                     <tr>
-                      <td><a href="#">View Profile</a></td>
+                      <td>
+                        <a href="../php/ProfileMphp.html">View Profile</a>
+                      </td>
                     </tr>
+
+                    <tr>
+                      <td>
+                        <a href="../profile custom/profileCustom.html"
+                          >Profile Custom</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="../profile manage/profile manage.html"
+                          >Profile Manage</a
+                        >
+                      </td>
+                    </tr>
+
                     <tr>
                       <td><a href="#">Settings</a></td>
                     </tr>
+                    <tr>
+                      <td>
+                        <a href="../Role Based Access/permissionSetting.html"
+                          >User Management</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../dashboard/dashboard.html">Dashboard</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../data exp/data_export.html">Data Export</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../privacy/privacy.html">Privacy</a>
+                      </td>
+                    </tr>
+
                     <tr>
                       <td>
                         <a
@@ -69,7 +113,7 @@
         <td class="sidebar">
           <h2>Your Menu</h2>
           <ul>
-            <li><a href="#">Friends</a></li>
+            <li><a href="../friends/friends.html">Friends</a></li>
             <li><a href="#">Photos</a></li>
           </ul>
         </td>
@@ -96,7 +140,7 @@
               </button>
             </div>
 
-            <div id="topPosts" style="display: block">
+            <div id="topPosts">
               <table class="posts-table" cellspacing="15">
                 <tr>
                   <td class="post">
@@ -105,16 +149,45 @@
                     <p>Just enjoying a great day!</p>
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    <i
+                      class="reaction"
+                      onclick="myFunction(this)"
+                      class="fa fa-thumbs-up"
+                    ></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      id="comment-1"
+                      class="comment"
+                      placeholder="comment here...."
+                    />
+                  </td>
+                </tr>
               </table>
             </div>
 
-            <div id="recentPosts" style="display: none">
+            <div id="recentPosts">
               <table class="posts-table" cellspacing="15">
                 <tr>
                   <td class="post">
                     <h3>Moinul Hasan</h3>
                     <p class="timestamp">2 hours ago</p>
                     <p>Loving this new app!</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      id="comment-2"
+                      class="comment"
+                      placeholder="comment here...."
+                    />
                   </td>
                 </tr>
               </table>

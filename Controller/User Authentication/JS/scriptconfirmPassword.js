@@ -20,8 +20,8 @@ document
       return false;
     }
 
-    if (password.length <= 8 || confirmPassword.length <= 8) {
-      alert("Password length must be more than 8 characters");
+    if (password.length <= 7 || confirmPassword.length <= 7) {
+      alert("Password length must be at least 8 characters");
       return false;
     }
 
@@ -45,6 +45,17 @@ document
     }
 
     alert("Password Change Successful");
-    form.action = "login.html";
-    form.submit();
+    return true;
   });
+
+function myFunction() {
+  const password = document.getElementById("password");
+  const confirmPassword = document.getElementById("confirmPassword");
+  if (password.type === "password") {
+    password.type = "text";
+    confirmPassword.type = "text";
+  } else {
+    password.type = "password";
+    confirmPassword.type = "password";
+  }
+}

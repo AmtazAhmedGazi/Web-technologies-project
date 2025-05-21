@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Landing Page Inquiry</title>
+    <link rel="stylesheet" href="../../Assets/landing page/landing_page.css" />
+  </head>
+  <body>
+    <div class="form-section">
+      <h1>Get Started with Our Platform</h1>
+      <p>Fill out the form below and we’ll get in touch!</p>
+
+      <form id="landingForm" onsubmit="return validateLandingForm()">
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="John Doe"
+        />
+
+        <label for="email">Email Address:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+        />
+
+        <label for="interest">Interested In:</label>
+        <select id="interest" name="interest">
+          <option value="">-- Select --</option>
+          <option value="about">About the System</option>
+          <option value="signup">Signup Help</option>
+          <option value="features">More Features</option>
+        </select>
+
+        <button type="submit">Submit Inquiry</button>
+      </form>
+
+      <p id="responseMessage"></p>
+    </div>
+
+    <script src="../../Controller/landing page/landing_page.js"></script>
+  </body>
+</html>

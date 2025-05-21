@@ -2,10 +2,13 @@
 <html>
   <head>
     <title>Manage User Action</title>
+    <link
+      rel="stylesheet"
+      href="../../Assets/Role Based Access/styleManageUser.css"
+    />
   </head>
   <body>
     <div class="container">
-      <a href="javascript:history.back()">Go Back</a>
       <h1>Manage User Action</h1>
       <form>
         <table>
@@ -20,7 +23,7 @@
           </tr>
           <tr>
             <td>
-              <label for="resitriction">Limit user Resitriction</label>
+              <label for="resitriction">Limit User Id Resitriction</label>
             </td>
 
             <td>
@@ -50,7 +53,7 @@
 
           <tr>
             <td>
-              <label for="comment">Limit user Comment</label>
+              <label for="comment">Limit User Comment</label>
             </td>
 
             <td>
@@ -80,11 +83,11 @@
 
           <tr>
             <td>
-              <label for="post">Limit user post</label>
+              <label for="post">Limit User post</label>
             </td>
 
             <td>
-              <input type="number" id="post" name="post" />
+              <!-- <input type="number" id="post" name="post" /> -->
               <input type="radio" id="postDay" name="post" value="postDay" />
               <label for="postDay">1 Day</label>
               <input type="radio" id="postWeek" name="post" value="postWeek" />
@@ -98,7 +101,7 @@
               <label for="postMonth">1 Month</label>
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <td>
               <label for="commentId">Search by Comment Id</label>
             </td>
@@ -127,18 +130,16 @@
                 value="Delete post"
               />
             </td>
-          </tr>
+          </tr> -->
 
           <tr>
-            <td>
+            <td colspan="5">
               <input
-                type="button"
+                type="submit"
                 id="submitBtn"
                 name="submitBtn"
                 value="Submit Action"
               />
-            </td>
-            <td>
               <input type="reset" value="Reset Form" />
             </td>
           </tr>

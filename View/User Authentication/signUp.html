@@ -6,6 +6,11 @@
       rel="stylesheet"
       href="../../Assets/User%20Authentication/styleSignUp.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <section class="signup-section">
@@ -14,7 +19,6 @@
         id="form-1"
         method="post"
         action="../../Controller/User Authentication/PHP/signupCheck.php"
-        onsubmit="return validateSignup();"
       >
         <table>
           <tr>
@@ -53,6 +57,9 @@
                 id="confirmPassword"
                 name="confirmPassword"
               />
+            </td>
+            <td>
+              <i class="fa fa-eye" onclick="myFunction()"> </i>
             </td>
           </tr>
 
