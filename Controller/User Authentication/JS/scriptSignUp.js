@@ -1,6 +1,5 @@
 form = document.getElementById("form-1");
 
-// FORGET PASSWORD PAGE
 document
   .getElementById("submit")
   .addEventListener("click", function validateForm() {
@@ -9,11 +8,9 @@ document
     const email = document.getElementById("email").value;
     const username = document.getElementById("username").value;
 
-    //email
     const atSymbolIndex = email.indexOf("@");
     const dotSymbolIndex = email.indexOf(".", atSymbolIndex);
 
-    //username
     for (let i = 0; i < username.length; i++) {
       const char = username[i];
       const isLetter =
@@ -38,7 +35,6 @@ document
       else if (char >= "0" && char <= "9") hasNumber = true;
     }
 
-    //Validate
     if (email == "") {
       alert("Email cannot be empty");
       return false;

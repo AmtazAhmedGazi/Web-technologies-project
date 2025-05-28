@@ -28,20 +28,20 @@ document
     const address = document.getElementById("address").value;
     const fileInput = document.getElementById("profilPic");
 
-    // if (!fileInput.files.length) {
-    //   alert("Please upload a profile picture.");
-    //   return false;
-    // }
-    // const file = fileInput.files[0];
-    // const fileName = file.name.toLowerCase();
-    // if (
-    //   !fileName.endsWith(".jpg") &&
-    //   !fileName.endsWith(".jpeg") &&
-    //   !fileName.endsWith(".png")
-    // ) {
-    //   alert("Profile picture must be a JPG or PNG file.");
-    //   return false;
-    // }
+    if (!fileInput.files.length) {
+      alert("Please upload a profile picture.");
+      return false;
+    }
+    const file = fileInput.files[0];
+    const fileName = file.name.toLowerCase();
+    if (
+      !fileName.endsWith(".jpg") &&
+      !fileName.endsWith(".jpeg") &&
+      !fileName.endsWith(".png")
+    ) {
+      alert("Profile picture must be a JPG ,JPEG or PNG file.");
+      return false;
+    }
 
     if (name == "") {
       alert("Name cannot be empty");
@@ -60,6 +60,10 @@ document
 
     if (date == "") {
       alert("Date cannot be empty");
+      return false;
+    }
+    if (address == "") {
+      alert("Address cannot be empty");
       return false;
     }
     if (contactNumber == "") {

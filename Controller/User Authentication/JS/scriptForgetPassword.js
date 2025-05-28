@@ -1,6 +1,5 @@
 form = document.getElementById("form-1");
 
-// FORGET PASSWORD PAGE
 document
   .getElementById("forgetBtn")
   .addEventListener("click", function validateForm() {

@@ -41,17 +41,19 @@
       function userCreate($user){
         $con = getConnection();
   
-        $sql = "SELECT * from users where username= '{$user['username']}' AND email='{$user['email']}' AND password='{$user['password']}'";
+        $sql = "SELECT * from users where username= '{$user['username']}'";
         $result = mysqli_query($con, $sql);
-        if (mysqli_num_rows($result) > 0) {
-            echo "Invalid";
-            return false;
-        }
-        $sql = "insert into users values(null, '{$user['username']}', '{$user['password']}', '{$user['email']}')";
-        if($result2 = mysqli_query($con, $sql)){
+        if (mysqli_num_rows($result) == 1 ) {
+            $sql1 = "insert into users_profile values(null, '{$user['username']}', '{$user['name']}', '{$user['gender']}' , '{$user['date']}','{$user['address']}', '{$user['contactNumber']}', '{$user['des']}')";
+            if($result2 = mysqli_query($con, $sql1)){
             return true;
-        }else{
-            return false;
+            }
+            else{
+                return false;
+            }
+        }
+        else {
+            echo "Username does not exists";
         }
         }
 
@@ -64,7 +66,7 @@
                 echo "Email already exists";
                 return true;
             }else{
-                return true;
+                return false;
             }
             }
 

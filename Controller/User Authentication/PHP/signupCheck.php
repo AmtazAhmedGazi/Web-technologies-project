@@ -8,7 +8,7 @@ if (isset($_POST["submit"])){
 $username = trim($_POST["username"]);
 $password = trim($_POST["password"]);
 $confirmPassword = trim($_POST["confirmPassword"]);
-$email = trim($_POST["email"]);
+$email = $_POST["email"];
 
 
 $hasUppercase = false;
@@ -40,7 +40,7 @@ for ($i = 0; $i < strlen($password); $i++) {
         header('Location: ../../../View/User%20Authentication/signUp.html');
       }
 
-       else if ($password != $confirmPassword) {
+       else if ($password !== $confirmPassword) {
          echo "Password Doesn't match";
          header('Location: ../../../View/User%20Authentication/signUp.html');
       }
@@ -49,11 +49,14 @@ for ($i = 0; $i < strlen($password); $i++) {
          header('Location: ../../../View/User%20Authentication/signUp.html');
       }
         else{ 
-          $_SESSION['email'] = ['email'=> $email ];
+          $_SESSION['email'] =$email;
+          $_SESSION['username'] = $username;
+
               $user = ['username'=> $username, 'password'=>$password, 'email'=> $email ];
               $status = signup($user);
               if($status){
                   header('location: ../../../View/User%20Authentication/otpEmail.php');
+                  echo"Success";
               }else{
                 header('Location: ../../../View/User%20Authentication/signUp.html');
               }

@@ -41,7 +41,6 @@ function updatePostPreview() {
       preview.appendChild(createVideoPreview(fileURL));
     } else {
       const errorMsg = document.createElement("p");
-      errorMsg.style.color = "red";
       errorMsg.textContent = "Unsupported media type.";
       preview.appendChild(errorMsg);
     }

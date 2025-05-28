@@ -18,28 +18,14 @@
       >
         <div id="profilePicSection">
           <div class="profile-pic-container">
-            <img
-              id="imagePreview"
-              src=""
-              alt="Profile Picture"
-              style="
-                display: none;
-                max-width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                object-fit: cover;
-              "
-            />
-            <p id="imagePreviewText" style="display: none; color: #666">
-              Profile Picture Preview
-            </p>
+            <img id="imagePreview" src="" alt="Profile Picture" />
+            <p id="imagePreviewText">Profile Picture Preview</p>
             <input
               type="file"
               id="profilPic"
               name="profilPic"
               accept="image/*"
               onchange="previewImage(event)"
-              style="display: block; margin-top: 10px; font-size: 14px"
             />
           </div>
         </div>
@@ -108,7 +94,6 @@
         </table>
       </form>
     </section>
-
     <script src="../../Controller/User%20Authentication/JS/scriptUserCreate.js"></script>
   </body>
 </html>

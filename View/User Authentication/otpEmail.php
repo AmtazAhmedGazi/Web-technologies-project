@@ -1,8 +1,7 @@
 <?php 
-    error_reporting(E_ALL);
-
-require_once('../../Controller/User Authentication/PHP/otpEmail.php');
+error_reporting(E_ALL);
 session_start();
+require_once('../../Controller/User Authentication/PHP/otpEmail.php');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $email = $_SESSION['email'] ;

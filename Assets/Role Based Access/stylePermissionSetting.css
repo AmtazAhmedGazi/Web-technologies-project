@@ -1,11 +1,9 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   font-family: sans-serif;
   background-color: #f4f6f8;
@@ -16,7 +14,6 @@ body {
   align-items: center;
 }
 
-/* Heading */
 h1 {
   color: #007bff;
   margin-bottom: 10px;
@@ -29,7 +26,6 @@ p {
   color: #555;
 }
 
-/* Navigation Links */
 a {
   display: inline-block;
   margin: 10px;

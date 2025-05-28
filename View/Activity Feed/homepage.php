@@ -1,0 +1,211 @@
+<?php
+error_reporting(E_ALL);
+  session_start();
+  if(!isset($_SESSION["user"])){
+    header("Location: ../User%20Authentication/login.html");
+  }
+  $user=$_SESSION['user'];
+  ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Social Media Home</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../../Assets/Activity%20Feed/styleHomepage.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <table class="header-table">
+        <tr>
+          <td class="logo">
+            <label for="logo">S</label>
+          </td>
+          <td class="searchbar">
+            <input type="text" placeholder="Search..." class="search-box" />
+          </td>
+          <td class="nav-links">
+            <table class="menu-table">
+              <tr>
+                <td>
+                  <a href="homepage.html"><i class="material-icons">home</i></a>
+                  <a href="../Direct%20Messaging/message.html"
+                    ><i class="material-icons">sms</i></a
+                  >
+                  <a href="#"><i class="material-icons">notifications</i></a>
+                  <span class="menu-btn" onclick="toggleDropdown()">
+                    <i class="material-icons">menu</i>
+                  </span>
+                </td>
+              </tr>
+              <tr id="dropdownRow" style="display: none">
+                <td class="dropdown-menu-cell">
+                  <table class="dropdown-menu">
+                    <tr>
+                      <td>
+                        <a href="../php/ProfileMphp.html">View Profile</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="../profile custom/profileCustom.html"
+                          >Profile Custom</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="../profile manage/profile manage.html"
+                          >Profile Manage</a
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="#">Settings</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../Role Based Access/permissionSetting.html"
+                          >User Management</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../dashboard/dashboard.html">Dashboard</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../data exp/data_export.html">Data Export</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../privacy/privacy.html">Privacy</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a
+                          href="../../Controller/User Authentication/PHP/logout.php"
+                          >Logout</a
+                        >
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <table class="layout-table" cellspacing="20">
+      <tr>
+        <td class="sidebar">
+          <h2>Your Menu</h2>
+          <ul>
+            <li><a href="../friends/friends.html">Friends</a></li>
+            <li><a href="#">Photos</a></li>
+          </ul>
+        </td>
+
+        <td class="main-content">
+          <section class="stories">
+            <table class="stories-table">
+              <tr>
+                <td class="story">Your Story</td>
+                <td class="story">Friend 1</td>
+                <td class="story">Friend 2</td>
+                <td class="story">Friend 3</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="posts">
+            <div class="post-toggle">
+              <button id="topBtn" class="active" onclick="togglePosts('top')">
+                Top Posts
+              </button>
+              <button id="recentBtn" onclick="togglePosts('recent')">
+                Most Recent
+              </button>
+            </div>
+
+            <div id="topPosts">
+              <table class="posts-table" cellspacing="15">
+                <tr>
+                  <td class="post">
+                    <h3>Kabir Rahman</h3>
+                    <p class="timestamp">5 hours ago</p>
+                    <p>Just enjoying a great day!</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i
+                      class="reaction"
+                      onclick="myFunction(this)"
+                      class="fa fa-thumbs-up"
+                    ></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      id="comment-1"
+                      class="comment"
+                      placeholder="comment here...."
+                    />
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div id="recentPosts">
+              <table class="posts-table" cellspacing="15">
+                <tr>
+                  <td class="post">
+                    <h3>Moinul Hasan</h3>
+                    <p class="timestamp">2 hours ago</p>
+                    <p>Loving this new app!</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      id="comment-2"
+                      class="comment"
+                      placeholder="comment here...."
+                    />
+                  </td>
+                  <div class="comments-container"></div>
+                </tr>
+              </table>
+            </div>
+          </section>
+        </td>
+      </tr>
+    </table>
+    <script src="../../Controller/Activity%20Feed/JS/homepage.js"></script>
+  </body>
+</html>
+
